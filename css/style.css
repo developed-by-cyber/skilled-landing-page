@@ -1,0 +1,479 @@
+:root {
+    --colors-dark-blue-gray: #666ca3;
+    --colors-yankees-blue: #13183f;
+    --colors-silver: #83869a;
+    --colors-pink: #f74780;
+    --colors-carnation-pink: #ffa7c3;
+    --colors-white: #ffffff;
+    --colors-g-magenta-orange: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+    --colors-g-magenta-blue: linear-gradient( 180deg, #4851ff -54.32%, #f02aa6 100% );
+    --colors-g-hover: linear-gradient( 0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) );
+    --fonts-main: "Plus Jakarta Sans", sans-serif;
+}
+@font-face {
+    font-family: 'Ubuntu-Regular.ttf';
+    src: url(../ubuntu/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family: 'Ubuntu-Bold.ttf';
+    src: url(../ubuntu/Ubuntu-Bold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ubuntu-Regular.ttf';
+    background-color: var(--colors-white);
+}
+a{
+    text-decoration: none;
+}
+main{
+    overflow: hidden;
+    height: fit-content;
+}
+button{
+    outline: 0;
+    border: 0;
+    font-family: 'Ubuntu-Bold.ttf';
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding: 28px 120px;
+}
+nav button{
+    padding: 17px 30px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Ubuntu-Bold.ttf';
+    border-radius: 30px;
+    background-color: var(--colors-yankees-blue);
+    box-shadow: 2px 4px 20px #13183f49;
+}
+nav button:hover{
+    background-color: var(--colors-dark-blue-gray);
+}
+.banner{
+    width: 100%;
+    padding: 20px 120px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.banner .left{
+    width: 45%;
+    padding: 60px 0px;
+    height: fit-content;
+}
+.banner .left h1{
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-family: 'Ubuntu-Bold.ttf';
+    color: var(--colors-yankees-blue);
+}
+.banner .left p{
+    font-size: 19px;
+    padding-right: 40px;
+    line-height: 27px;
+    color: var(--colors-silver);
+}
+.banner .right{
+    width: 45%;
+    height: fit-content;
+}
+.banner .left button{
+    padding: 17px 30px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Ubuntu-Bold.ttf';
+    background-image: var(--colors-g-magenta-orange);
+    border-radius: 31.5px;
+    margin-top: 30px;
+}
+.banner .left button:hover{
+    opacity: .8;
+}
+.banner .right .img-hold{
+    width: 100%;
+    height: 68vh;
+    background-image: var(--colors-g-magenta-orange);
+    border-top-right-radius: 180px;
+    border-top-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+    border-bottom-left-radius: 180px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    left: 150px;
+}
+.banner .right .hold{
+    width: 52%;
+    height: fit-content;
+    border-top-right-radius: 180px;
+    border-top-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+    border-bottom-left-radius: 180px;
+    position: relative;
+}
+.banner .right .img-hold img{
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.banner .right .hold::before{
+    content: "";
+    background-image: var(--colors-g-magenta-blue);
+    width: 320px;
+    height: 740px;
+    position: absolute;
+    left: 340px;
+    top: -245px;
+    bottom: 0;
+    transform: rotate(41deg);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.banner .right .cards{
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 35px;
+    padding-left: 25px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--colors-silver);
+    border-radius: 12.5px;
+    font-weight: 600;
+    position: absolute;
+    line-height: 32px;
+    top: 245px;
+    right: 130px;
+    z-index: 1000;
+    padding-top: 8px;
+    box-shadow: -2px 4px 20px #13183f3f;
+}
+.banner .right .card2{
+    right: 420px;
+    top: 440px;
+    box-shadow: -2px 4px 20px #13183f3f;
+}
+.banner .right .cards h2{
+    font-size: 35px;
+    color: var(--colors-yankees-blue);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-family: 'Ubuntu-Bold.ttf';
+}
+.mobi{
+    display: none;
+}
+.features{
+    width: 100%;
+    height: auto;
+    background-color: rgba(167, 167, 167, 0.027);
+    margin-top: 50px;
+    padding: 20px 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 2em;
+    padding-bottom: 50px;
+}
+.features .box{
+    width: 31%;
+    height: 36vh;
+    background-color: green;
+    padding-left: 30px;
+    padding-top: 40px;
+    border-radius: 30px;
+    border: 0;
+    background-color: var(--colors-white);
+    position: relative;
+    padding-right: 30px;
+    box-shadow: 1px 4px 15px  #13183f23;
+}
+.features .box1{
+    width: 31%;
+    height: 36vh;
+    background-color: green;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-top: 40px;
+    border-radius: 30px;
+    border: 0;
+    background-image: var(--colors-g-magenta-orange);
+    box-shadow: 1px 4px 15px  #13183f23;
+}
+.features .box1 h1{
+    color: white;
+}
+.features .box .h1{
+    color: var(--colors-yankees-blue);
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.features .box p{
+    line-height: 23px;
+    margin-bottom: 20px;
+    color: var(--colors-silver);
+}
+.features .box a{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--colors-pink);
+}
+.features .box a:hover{
+    color: var(--colors-carnation-pink);
+}
+.features .box .icon{
+    position: absolute;
+    top: -27px;
+    left: 35px;
+}
+footer{
+    background-color: var(--colors-yankees-blue);
+    width: 100%;
+    padding: 30px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer button{
+    padding: 17px 30px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Ubuntu-Bold.ttf';
+    border-radius: 30px;
+    background-image: var(--colors-g-magenta-blue);
+    box-shadow: 2px 4px 20px #13183f49;
+}
+footer button:hover{
+    filter: brightness(110%);
+}
+@media screen and (max-width: 1115px) {
+    nav, .banner, footer{
+        padding: 20px 30px;
+    }
+    .banner .right .hold{
+        width: 56%;
+    }
+    .banner .right .img-hold{
+        left: 80px;
+    }
+    .banner .right .hold::before{
+        left: 330px;
+        top: -290px;
+    }
+    .banner .right .cards{
+        right: 80px;
+    }
+    .banner .right .card2{
+        right: 320px;
+    }
+    .features{
+        padding: 20px 10px;
+    }
+    .features .box, .features .box1{
+        width: 38%;
+        margin: 30px auto;
+        padding-right: 10px;
+        height: auto;
+        padding-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1025px){
+    .banner .left h1{
+        font-size: 50px;
+    }
+    .banner .right .hold{
+        min-width: 80%;
+    }
+    .banner .right .img-hold{
+        max-height: 500px;
+        width: 100%;
+        left: 0px;
+    }
+    .banner .right .cards{
+        right: 40px;
+    }
+    .banner .right .card2{
+        right: 280px;
+    }
+    .banner .right .hold::before{
+        left: 200px;
+        top: -260px;
+    }
+    .banner .left{
+        padding-top: 100px;
+    }
+    .banner .left h1{
+        font-size: 40px;
+    }
+    .banner .left p{
+        padding-right: 20px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .banner .right .cards{
+        right: 15px;
+    }
+    .banner .right .card2{
+        right: 250px;
+    }
+}
+
+
+@media screen and (max-width: 660px){
+    nav button, footer button{
+        padding: 13px 15px;
+    }
+    nav img, footer img{
+        width: 80%;
+    }
+    .banner{
+        flex-wrap: wrap;
+    }
+    .banner .left{
+        width: 100%;
+    }
+    .banner .right{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .banner .right .hold{
+        margin: auto;
+        min-width: 50%;
+        display: none;
+    }
+    .banner .right .hold::before{
+        display: none;
+    }
+    .banner .right .img-hold{
+        width: 100%;
+    }
+    .mobi{
+        display: flex;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+        background-image: var(--colors-g-magenta-orange);
+    }
+    .mobi img{
+        width: 85%;
+        object-fit: cover;
+        position: absolute;
+        bottom: -200px;
+        left: 40px;
+    }
+    .banner .left{
+        padding-top: 25px;
+    }
+    .banner .left h1{
+        font-size: 64px;
+    }
+    .banner .left p{
+        padding-right: 20px;
+        font-size: 25px;
+        line-height: 38px;
+        margin-top: -10px;
+    }
+    .banner .right .cards{
+        right: 40px;
+        top: 750px;
+    }
+    .banner .right .card2{
+        right: 360px;
+        top: 900px;
+    }
+    .features .box, .features .box1{
+        width: 60%;
+        margin: 30px auto;
+        padding-right: 10px;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px){
+    nav, footer{
+        padding: 25px 18px;
+    }
+    .banner{
+        padding: 0px 18px;
+        margin-top: 20px;
+    }
+    .banner .left {
+        padding-bottom: 0px;
+    }
+    .banner .left h1{
+        font-size: 40px;
+    }
+    .banner .left p{
+        padding-right: 20px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .mobi{
+        width: 300px;
+        height: 300px;
+
+    }
+    .mobi img{
+        width: 75%;
+        bottom: -90px;
+    }
+    .banner .left button{
+        padding: 15px 20px;
+    }
+    .banner .right{
+        margin-top: 50px;
+    }
+    .banner .right .cards h2{
+        font-size: 25px;
+    }
+    .banner .right .cards{
+        right: 25px;
+        top: 550px;
+        font-size: 15px;
+        padding: 5px 22px;
+        line-height: 27px;
+        box-shadow: -2px 11px 20px #13183f3f;
+    }
+    .banner .right .card2{
+        right: 255px;
+        top: 670px;
+        padding: 8px 20px;
+    }
+    .features .box, .features .box1{
+        width: 90%;
+        margin: 15px auto;
+        padding-right: 10px;
+        height: auto;
+        padding-bottom: 30px;
+    }
+}
